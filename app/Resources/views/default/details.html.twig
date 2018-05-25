@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <br/>
+  <br/>
+  <a href="/todolist/web" class="btn btn-default">Regresar</a>
+  <h2 class="page-header">{{todo.name}}</h2>
+  <ul class="list-group">
+    <li class="group-item">Categoria : {{todo.category}}</li>
+    <li class="group-item">Descripcion : {{todo.description}}</li>
+    <li class="group-item">Fecha límite : {{todo.dueDate | date('F j, Y, g:i, a')}}</li>
+  </ul>
+{% endblock %}
